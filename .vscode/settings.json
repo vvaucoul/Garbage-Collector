@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "main.C": "cpp",
+        "*.tcc": "c",
+        "cstdlib": "c",
+        "memory": "c",
+        "new": "c",
+        "garbage_collector.h": "c"
+    }
+}
