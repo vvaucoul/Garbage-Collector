@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 15:38:06 by vvaucoul          #+#    #+#             */
-/*   Updated: 2022/08/20 16:39:27 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/09/08 12:16:26 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,8 @@ void __delete_element(void *ptr)
             else
                 prev->next = tmp->next;
             free(tmp->ptr);
-            tmp->ptr = NULL;
             free(tmp);
-            tmp = NULL;
-            return;
+            return ;
         }
         prev = tmp;
         tmp = tmp->next;
@@ -78,4 +76,5 @@ void __delete_all(void)
         }
         tmp = next;
     }
+    _g_gc = NULL;
 }
